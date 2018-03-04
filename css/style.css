@@ -1,0 +1,598 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+@font-face {
+  font-family: HouschkaRoundedBold;
+  src: url(../fonts/HouschkaRoundedBold.otf);
+}
+body{
+    overflow-x: hidden;
+}
+* {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13pt;
+  font-weight: 400;
+}
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+h1 {
+  font-family: HouschkaRoundedBold;
+  text-align: center;
+  font-size: 35pt;
+  margin: 20px 0px;
+}
+h2 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  font-size: 14pt;
+}
+h3 {
+  color: #8894a8;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  font-size: 10pt;
+  margin: 10px 0px;
+}
+a.colored {
+  padding: 10px 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 20px 0px rgba(240, 100, 147, 0.3);
+  color: white;
+}
+a.purple {
+  background: linear-gradient(90deg, #b685fa, #f06493);
+}
+a.blue {
+  background: linear-gradient(90deg, #47a3f6, #af8afe);
+}
+a.yellow {
+  background: linear-gradient(90deg, #f1648e, #fea42c);
+}
+.carousel-control.left,
+.carousel-control.right {
+  background: none;
+  background-image: none;
+}
+.carousel-control {
+  text-shadow: none;
+}
+.glyphicon-chevron-left:before {
+  content: url(../img/arrowLeft.png);
+}
+.glyphicon-chevron-right:before {
+  content: url(../img/arrowRight.png);
+}
+.carousel-indicators li {
+  background-color: #ededed;
+  border: none;
+  width: 17px;
+  height: 17px;
+  margin: 1px 10px;
+}
+.carousel-indicators .active {
+  width: 17px;
+  height: 17px;
+  background-color: #bebebe;
+  margin: 1px 10px;
+}
+.carousel-control {
+  width: 10%;
+}
+@media screen and (max-width: 1425px){
+    .carousel-control {
+        width: 1.25%;
+    }
+}
+.carousel-control .glyphicon-chevron-right, .carousel-control .icon-next{
+    margin-right: 0px;
+}
+.container-fluid{
+    min-width: 1200px;
+}
+nav {
+  font-weight: 700;
+}
+nav a {
+  font-weight: 700;
+  font-size: 12pt;
+}
+nav .logo img {
+  display: block;
+  margin: 0 0 0 150px;
+  height: 100px;
+}
+nav .buttons {
+  padding: 20px;
+  height: 60px;
+  line-height: 60px;
+}
+header.whiteTheme {
+  font-size: 16px;
+  height: 700px;
+  padding: 20px 0px 40px 0px;
+}
+header.whiteTheme .container {
+  padding-top: 57px;
+}
+header.whiteTheme .container .row > div:first-child {
+  padding-left: 1.75%;
+}
+header.whiteTheme .container .row > div:first-child p {
+  padding: 15px 0px;
+}
+header.whiteTheme h1 {
+  margin-bottom: 30px;
+  text-align: left;
+}
+header.whiteTheme a {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 20px;
+  padding: 10px 35px;
+}
+header.whiteTheme img {
+  height: 500px;
+}
+.guide,
+.projects,
+.resources,
+.sponsors,
+.feedback,
+.joinUs {
+  text-align: center;
+  padding: 20px;
+}
+.guide.blueTheme {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.guide.blueTheme .item {
+  height: 760px;
+}
+.guide.blueTheme .item .row > div {
+  padding: 20px 0px;
+}
+.guide.blueTheme .item p {
+  display: inline-block;
+  margin: 0 auto;
+  width: 55%;
+}
+.projects {
+  padding: 10px 10px 150px 10px;
+}
+.projects .container {
+  padding: 15px;
+}
+.projects .container > .row > div {
+  padding: 15px;
+}
+.projects .container > .row > div .card {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background-color: white;
+}
+.projects .container > .row > div .card h3 {
+  text-align: left;
+  margin: 15px 30px;
+}
+.projects .container > .row > div .card .image {
+  padding: 10px;
+  color: white;
+  font-size: 16pt;
+  line-height: 25pt;
+  font-family: HouschkaRoundedBold;
+  text-align: left;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+  height: 170px;
+  background-image: url(../img/nik-macmillan-280300.jpg);
+}
+.projects .container > .row > div .card .publisher {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: flex-start;
+}
+.projects .container > .row > div .card .publisher .avatar {
+  width: 25%;
+}
+.projects .container > .row > div .card .publisher .avatar img {
+  border-radius: 50%;
+  width: 100%;
+}
+.projects .container > .row > div .card .publisher .title {
+  padding: 10px;
+}
+.projects .container > .row > div .card .publisher .title h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 15pt;
+}
+.projects .container > .row > div .card .text {
+  text-align: justify;
+  padding: 10px 30px;
+}
+.projects .container > .row > div .card a.colored {
+  display: inline-block;
+  margin: 20px 0px;
+  padding: 10px 50px;
+}
+.projects .container > .row > div .bigCard {
+  padding-bottom: 15px;
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background-color: white;
+}
+.projects .container > .row > div .bigCard h3 {
+  text-align: left;
+  margin: 15px 60px;
+}
+.projects .container > .row > div .bigCard .image {
+  padding: 10px 20px;
+  text-align: left;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+  height: 170px;
+  background-image: url(../img/nik-macmillan-280300.png);
+  background-position: 50% 50%;
+}
+.projects .container > .row > div .bigCard .image span {
+  color: white;
+  font-size: 16pt;
+  line-height: 25pt;
+  font-family: HouschkaRoundedBold;
+}
+.projects .container > .row > div .bigCard .image a {
+  float: right;
+}
+.projects .container > .row > div .bigCard .publisher {
+  padding: 10px 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+.projects .container > .row > div .bigCard .publisher .avatar {
+  width: 5%;
+}
+.projects .container > .row > div .bigCard .publisher .avatar img {
+  border-radius: 50%;
+  width: 100%;
+}
+.projects .container > .row > div .bigCard .publisher .title {
+  padding: 10px;
+}
+.projects .container > .row > div .bigCard .publisher .title h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 15pt;
+}
+.projects .container > .row > div .bigCard .text {
+  text-indent: 50px;
+  text-align: justify;
+  padding: 10px 60px;
+}
+.projects .container > .row > div .bigCard .text p {
+  margin: 0;
+}
+.projects .container > .row > div .bigCard .info .list {
+  padding: 20px 10px 20px 80px;
+  text-align: left;
+}
+.projects .container > .row > div .bigCard .info .list .li {
+  padding: 5px 0px;
+}
+.projects .container > .row > div .bigCard .info .list .li img {
+  margin: 0px 30px 0px 0px;
+}
+.projects .container > .row > div .bigCard .info .button {
+  padding: 55px 0px;
+  display: flex;
+  align-content: center;
+}
+.projects .container > .row > div .bigCard .info .button a.colored {
+  text-decoration: none;
+  padding: 10px 50px;
+}
+.projects .container > .row > div .bigCard a.colored {
+  display: inline-block;
+  margin: 20px 0px;
+  padding: 10px 30px;
+}
+.projects .carousel-indicators li,
+.projects .carousel-indicators li .active {
+  margin-top: -70px;
+  margin-bottom: -80px;
+}
+.projects .carousel-control .glyphicon-chevron-left,
+.projects .carousel-control .glyphicon-chevron-right,
+.projects .carousel-control .icon-next,
+.projects .carousel-control .icon-prev {
+  margin-top: -80px;
+}
+@media screen and (min-width: 768px) {
+  .projects .carousel-control .glyphicon-chevron-left,
+  .projects .carousel-control .glyphicon-chevron-right,
+  .projects .carousel-control .icon-next,
+  .projects .carousel-control .icon-prev {
+    margin-top: -80px;
+  }
+}
+.resources {
+  padding: 10px 10px 150px 10px;
+}
+.resources .container {
+  padding: 15px;
+}
+.resources .container > .row > div {
+  padding: 15px;
+}
+.resources .container > .row > div .card {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  background-color: white;
+}
+.resources .container > .row > div .card h3 {
+  text-align: left;
+  margin-top: 25px;
+  margin: 15px 30px;
+}
+.resources .container > .row > div .card .image {
+  padding: 10px;
+  color: white;
+  font-size: 16pt;
+  line-height: 25pt;
+  font-family: HouschkaRoundedBold;
+  text-align: left;
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
+  height: 170px;
+  background-image: url(../img/nik-macmillan-280300.jpg);
+}
+.resources .container > .row > div .card .publisher {
+  padding: 10px 26px;
+  display: flex;
+  justify-content: flex-start;
+}
+.resources .container > .row > div .card .publisher .avatar {
+  width: 25%;
+}
+.resources .container > .row > div .card .publisher .avatar img {
+  border-radius: 50%;
+  width: 100%;
+}
+.resources .container > .row > div .card .publisher .title h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 15pt;
+}
+.resources .container > .row > div .card .text {
+  text-align: justify;
+  padding: 10px 30px;
+}
+.resources .container > .row > div .card a.colored {
+  display: inline-block;
+  margin: 20px 0px;
+  padding: 10px 30px;
+}
+.resources .carousel-indicators li,
+.resources .carousel-indicators li .active {
+  margin-top: -70px;
+  margin-bottom: -80px;
+}
+.resources .carousel-control .glyphicon-chevron-left,
+.resources .carousel-control .glyphicon-chevron-right,
+.resources .carousel-control .icon-next,
+.resources .carousel-control .icon-prev {
+  margin-top: -60px;
+}
+@media screen and (min-width: 768px) {
+  .resources .carousel-control .glyphicon-chevron-left,
+  .resources .carousel-control .glyphicon-chevron-right,
+  .resources .carousel-control .icon-next,
+  .resources .carousel-control .icon-prev {
+    margin-top: -60px;
+  }
+}
+.sponsors {
+  padding-bottom: 30px;
+  height: 810px;
+}
+.sponsors .item {
+  padding-bottom: 30px;
+}
+.sponsors p {
+  margin: 10px 0px 0px 0px;
+}
+.sponsors .container .row:first-child {
+  padding-top: 50px;
+}
+.sponsors .container .row:last-child {
+  padding-bottom: 60px;
+}
+.sponsors .block {
+  height: 250px;
+  padding-top: 110px;
+}
+.sponsors .block img {
+  width: 70%;
+}
+.sponsors .carousel-control .glyphicon-chevron-left,
+.sponsors .carousel-control .glyphicon-chevron-right,
+.sponsors .carousel-control .icon-next,
+.sponsors .carousel-control .icon-prev {
+  margin-top: -95px;
+}
+@media screen and (min-width: 768px) {
+  .sponsors .carousel-control .glyphicon-chevron-left,
+  .sponsors .carousel-control .glyphicon-chevron-right,
+  .sponsors .carousel-control .icon-next,
+  .sponsors .carousel-control .icon-prev {
+    margin-top: -95px;
+  }
+}
+.sponsors .carousel-indicators li,
+.sponsors .carousel-indicators li .active {
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+.feedback {
+  padding-bottom: 50px;
+}
+.feedback .container {
+  padding: 20px 10px;
+}
+.feedback .container > .row > div {
+  padding: 13px;
+}
+.feedback .container > .row > div .card {
+  box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.1);
+  padding: 26px;
+  border-radius: 26px;
+  background-color: white;
+}
+.feedback .container > .row > div .card .text p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  text-align: justify;
+}
+.feedback .container > .row > div .card .text h2 {
+  text-align: left;
+}
+.feedback .container > .row > div .card .sign {
+  margin-top: 80px;
+}
+.joinUs {
+  color: white;
+  height: 415px;
+  background-color: black;
+  background-image: url(../img/join_bg.jpg);
+  background-position: 50% 65%;
+  background-size: 120%;
+  padding: 40px 10px;
+  font-family: HouschkaRoundedBold;
+}
+.joinUs a.colored {
+  font-size: 16pt;
+  font-weight: 700;
+  display: inline-block;
+  margin: 20px 0px 5px 0px;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+.joinUs a {
+  font-size: 10pt;
+  text-decoration: underline;
+  display: block;
+}
+footer.blueTheme {
+  padding: 60px 100px;
+}
+footer.blueTheme .logo {
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 126px;
+}
+footer.blueTheme .logo h3 {
+  line-height: 60px;
+  font-size: 12pt;
+  margin: 0px 0px 0px 50px;
+  padding: 0;
+}
+footer.blueTheme .buttons {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  justify-content: center;
+}
+footer.blueTheme .buttons a {
+  font-size: 12pt;
+  font-weight: 700;
+  padding: 0 25px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 200px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(3, 27, 71, 0.5);
+}
+.blurred {
+  filter: blur(5px);
+}
+.modal-content {
+  height: 400px;
+  border-radius: 20px;
+  background-color: white;
+  margin: auto;
+  padding: 10px 10px 20px 10px;
+  width: 450px;
+  text-align: center;
+}
+.modal-content p {
+  padding: 10px 40px;
+}
+.modal-content a.colored {
+  font-size: 16pt;
+  font-weight: 700;
+  display: inline-block;
+  margin: 20px 0px 5px 0px;
+  padding: 10px 50px;
+  text-decoration: none;
+}
+.modal-content a {
+  font-size: 10pt;
+  text-decoration: underline;
+  display: block;
+}
+.swatches {
+  padding: 170px 0px 0px 10px;
+  display: none;
+  position: fixed;
+  width: 10%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+}
+.rect {
+  margin: 10px 0px;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+.rect:nth-of-type(1) {
+  background-color: #42a5f5;
+}
+.rect:nth-of-type(2) {
+  background-color: #f06292;
+}
+.rect:nth-of-type(3) {
+  background-color: #ffa726;
+}
+.rect:nth-of-type(4) {
+  background-color: #b388ff;
+}
+.rect:nth-of-type(5) {
+  background-color: #021b47;
+}
+.blueTheme {
+  background-color: #031b47;
+  color: white;
+}
+.whiteTheme {
+  background-color: white;
+  color: #031b47;
+}
+.grayTheme {
+  background-color: #f9f9f9;
+  color: #031b47;
+}
