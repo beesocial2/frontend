@@ -616,3 +616,13 @@ footer.blueTheme .buttons a {
 #photo-eco-theatre {
   background-image: url(../img/projects/3.png);
 }
+
+#resource-cinema {
+  background-image: url(../img/resources/cinema.jpg);
+}
+#resource-music {
+  background-image: url(../img/resources/music.jpg);
+}
+#resource-consulting {
+  background-image: url(../img/resources/consulting.jpg);
+}
