@@ -189,6 +189,8 @@ header.whiteTheme img {
   border-top-right-radius: 26px;
   height: 170px;
   background-image: url(../img/nik-macmillan-280300.jpg);
+  background-size: cover;
+  text-shadow: 1px 1px 1px #000;
 }
 .projects .container > .row > div .card .publisher {
   padding: 10px 30px;
@@ -512,21 +514,17 @@ footer.blueTheme .buttons a {
   font-weight: 700;
   padding: 0 25px;
 }
-.modal {
+/*.modal {
   display: none;
   position: fixed;
   z-index: 1;
   padding-top: 200px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100vw;
   height: 100vh;
   overflow: auto;
   background-color: rgba(3, 27, 71, 0.5);
-}
-.blurred {
-  filter: blur(5px);
 }
 .modal-content {
   height: 400px;
@@ -552,6 +550,9 @@ footer.blueTheme .buttons a {
   font-size: 10pt;
   text-decoration: underline;
   display: block;
+}*/
+.blurred {
+  filter: blur(5px);
 }
 .swatches {
   padding: 170px 0px 0px 10px;
@@ -595,4 +596,22 @@ footer.blueTheme .buttons a {
 .grayTheme {
   background-color: #f9f9f9;
   color: #031b47;
+}
+
+.modal {
+  z-index: 1041;
+}
+
+#project-detail {
+  display: none;
+}
+
+#photo-cft {
+  background-image: url(../img/projects/1.png);
+}
+#photo-vremy-zemli {
+  background-image: url(../img/projects/2.png);
+}
+#photo-eco-theatre {
+  background-image: url(../img/projects/3.png);
 }
