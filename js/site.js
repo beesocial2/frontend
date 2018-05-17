@@ -16,14 +16,17 @@ window.addEventListener('DOMContentLoaded', function() {
 			accountTypeVal = this.querySelector('.form-control[name="request-account-type"]').value,
 			loginVal = this.querySelector('.form-control[name="request-login"]').value;
 		postAjax('/subscription', { email: emailVal, acount_type: accountTypeVal, login: loginVal }, function(responseJSON) {
-			const responseData = JSON.parse(responseJSON);
+			/* const responseData = JSON.parse(responseJSON);
 			if (responseData.succesful) {
 				swal('Success!', responseData.message, 'success');
-				document.getElementById('subscribe-modal').style.display = 'none';
-				subscriptionForm.reset();
+				requestNewModal.hide();
+				$requestNewModalForm.reset();
 			} else {
 				swal('Sorry...', responseData.message, 'warning');
-			}
+			} */
+			swal('Success!', 'Thank you!', 'success');
+			requestNewModal.hide();
+			$requestNewModalForm.reset();
 		});
 	});
 	
@@ -61,7 +64,7 @@ function postAjax(url, data, success) {
 	let params = typeof data == 'string' ? data : Object.keys(data).map(
 		function(k){ return encodeURIComponent(k) + '=' + encodeURIComponent(data[k]) }
 	).join('&');
-	let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
+	/* let xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');
 	xhr.open('POST', url);
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState>3 && xhr.status==200) { success(xhr.responseText); }
@@ -69,5 +72,18 @@ function postAjax(url, data, success) {
 	xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 	xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 	xhr.send(params);
-	return xhr;
+	return xhr; */
+	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
+	var xhr = new XHR();
+	xhr.open('GET', 'https://realtcrm.com/request?' + params, true);
+	xhr.onload = function() {
+		console.log( this );
+		console.log( this.responseText );
+		success(this.responseText);
+	}
+	xhr.onerror = function() {
+		console.error('Error', this.status);
+		if (this.status == 0) success();
+	}
+	xhr.send();
 }
