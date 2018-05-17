@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
 			} else {
 				swal('Sorry...', responseData.message, 'warning');
 			} */
-			swal('Success!', 'Thank you!', 'success');
+			swal({title: 'Thank you!', text: 'Your request is accepted, you will be notified by email!'});
 			requestNewModal.hide();
 			$requestNewModalForm.reset();
 		});
