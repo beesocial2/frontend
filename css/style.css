@@ -626,3 +626,12 @@ footer.blueTheme .buttons a {
 #resource-consulting {
   background-image: url(../img/resources/consulting.jpg);
 }
+
+nav a {
+  font-weight: 400;
+}
+#request-new-btn {
+  color: #ff0000;
+  font-size: 14pt;
+  font-weight: 600;
+}
