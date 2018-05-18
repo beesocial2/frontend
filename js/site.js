@@ -30,6 +30,12 @@ window.addEventListener('DOMContentLoaded', function() {
 		});
 	});
 	
+	$requestNewModalFormRequestLogin = $requestNewModalForm.querySelector('.form-control[name="request-login"]');
+	$requestNewModalForm.querySelector('.form-control[name="request-email"]').addEventListener('input', function() {
+		let newRequestLogin = this.value.split('@')[0];
+		$requestNewModalFormRequestLogin.value = newRequestLogin;
+	});;
+	
 	/*const subscriptionForm = document.getElementById('subscription');
 	if (subscriptionForm) {
 		subscriptionForm.addEventListener('submit', function(e) {
