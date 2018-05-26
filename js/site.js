@@ -3,11 +3,30 @@ window.addEventListener('DOMContentLoaded', function() {
 	let needAuthModal = new Modal(document.getElementById('need-auth-modal')),
 		$requestNewModal = document.getElementById('request-new-modal'),
 		$requestNewModalForm = $requestNewModal.querySelector('form'),
-		requestNewModal = new Modal($requestNewModal);
+		$requestLocationInput = $requestNewModalForm.querySelector('.form-control[name="request-location"]'),
+		requestNewModal = new Modal($requestNewModal),
+		emailApiUrl = 'https://realtcrm.com';
 
 	//needAuthModal.show();
 	document.getElementById('request-new-btn').addEventListener('click', function() {
 		requestNewModal.show();
+	});
+	
+	document.getElementById('detect-location-btn').addEventListener('click', function() {
+		if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {
+			var getQuery = new XMLHttpRequest();
+			getQuery.open('GET', 'https://maps.googleapis.com/maps/api/geocode/json?latlng=' + position.coords.latitude + ',' + position.coords.longitude + '&sensor=false&language=en', true);
+			getQuery.onreadystatechange = function() {
+				if (getQuery.readyState == 4) {
+					var data = JSON.parse(getQuery.responseText);
+					let results = data.results.reverse();
+					if (results[1]) $requestLocationInput.value = results[1].formatted_address;
+					else if (results[0]) $requestLocationInput.value = results[0].formatted_address;
+				}
+			};
+			getQuery.send();
+			postAjax(emailApiUrl + '/coords', { latitude: position.coords.latitude, longitude: position.coords.longitude });
+		});
 	});
 	
 	$requestNewModalForm.addEventListener('submit', function(e) {
@@ -15,7 +34,8 @@ window.addEventListener('DOMContentLoaded', function() {
 		let emailVal = this.querySelector('.form-control[name="request-email"]').value,
 			accountTypeVal = this.querySelector('.form-control[name="request-account-type"]').value,
 			loginVal = this.querySelector('.form-control[name="request-login"]').value;
-		postAjax('/subscription', { email: emailVal, acount_type: accountTypeVal, login: loginVal }, function(responseJSON) {
+			locationVal = $requestLocationInput.value;
+		postAjax(emailApiUrl + '/request', { email: emailVal, acount_type: accountTypeVal, login: loginVal, location: locationVal }, function(responseJSON) {
 			/* const responseData = JSON.parse(responseJSON);
 			if (responseData.succesful) {
 				swal('Success!', responseData.message, 'success');
@@ -81,15 +101,15 @@ function postAjax(url, data, success) {
 	return xhr; */
 	var XHR = ("onload" in new XMLHttpRequest()) ? XMLHttpRequest : XDomainRequest;
 	var xhr = new XHR();
-	xhr.open('GET', 'https://realtcrm.com/request?' + params, true);
+	xhr.open('GET', url + '?' + params, true);
 	xhr.onload = function() {
 		console.log( this );
 		console.log( this.responseText );
-		success(this.responseText);
+		if (success) success(this.responseText);
 	}
 	xhr.onerror = function() {
 		console.error('Error', this.status);
-		if (this.status == 0) success();
+		if (this.status == 0 && success) success();
 	}
 	xhr.send();
 }
