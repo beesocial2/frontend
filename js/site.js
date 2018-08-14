@@ -1,16 +1,19 @@
 window.addEventListener('DOMContentLoaded', function() {
 
 	let needAuthModal = new Modal(document.getElementById('need-auth-modal')),
+		$requestNewBtns = document.getElementsByClassName('request-new-btn'),
 		$requestNewModal = document.getElementById('request-new-modal'),
 		$requestNewModalForm = $requestNewModal.querySelector('form'),
 		$requestLocationInput = $requestNewModalForm.querySelector('.form-control[name="request-location"]'),
 		requestNewModal = new Modal($requestNewModal),
 		emailApiUrl = 'https://realtcrm.com';
 
-	//needAuthModal.show();
-	document.getElementById('request-new-btn').addEventListener('click', function() {
-		requestNewModal.show();
-	});
+	for (let i = 0; i < $requestNewBtns.length; i++) {
+		$requestNewBtns[i].addEventListener('click', function(e) {
+			e.preventDefault();
+			requestNewModal.show();
+		});
+	}
 	
 	document.getElementById('detect-location-btn').addEventListener('click', function() {
 		if (navigator.geolocation) navigator.geolocation.getCurrentPosition(function(position) {

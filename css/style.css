@@ -630,7 +630,7 @@ footer.blueTheme .buttons a {
 nav a {
   font-weight: 400;
 }
-#request-new-btn {
+nav .request-new-btn {
   color: #ff0000;
   font-size: 14pt;
   font-weight: 600;

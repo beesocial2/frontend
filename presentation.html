@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Bee Social - blockchain platform that connects volunteers, commercial companies and NPOs.</title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css?201808141340">
+		<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48904568 = new Ya.Metrika2({ id:48904568, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48904568" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+		<style>
+			header.whiteTheme {
+				height: inherit;
+			}
+		</style>
+	</head>
+	<body>
+		<nav class="container-fluid whiteTheme">
+			<div class="row">
+				<div class="col-lg-5 col-md-5 logo"><img src="img/logo.png" alt=""></div>
+				<div class="col-lg-7 col-mg-7 buttons">
+					<div class="row">
+						<a href="#" class="col-lg-2 col-md-2">About</a>
+						<a href="#" class="col-lg-2 col-md-2">Projects</a>
+						<a href="#" class="col-lg-2 col-md-2">Resources</a>
+						<a href="#" class="col-lg-2 col-md-2">Sponsors</a>
+						<a href="#" class="col-lg-2 col-md-2 request-new-btn">Beta <img src="img/Icon.png"></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<header class="container-fluid whiteTheme">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 col-md-6">
+						<h1>Presentation</h1>
+						<iframe src="https://www.slideshare.net/slideshow/embed_code/key/BYDO0uEeUO8Pf1" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen></iframe>
+						<a href="/presentation.pptx" class="colored purple">Download presentation</a>
+						<a target="_blank" href="https://view.officeapps.live.com/op/view.aspx?src=https://beesocial.in/presentation.pptx" class="colored purple">View in Microsoft office online</a>
+					</div>
+					<div class="col-lg-6 col-md-6"><img src="img/about_logo.png" alt=""></div>
+				</div>
+			</div>
+		</header>
+		<div class="container-fluid joinUs">
+			<h1>Join us!</h1>
+			<a href="#" class="colored yellow request-new-btn">SIGN UP FOR BETA</a>
+			<!--<a href="#">Login</a>-->
+		</div>
+		<footer class="container-fluid blueTheme">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 logo">
+					<img src='img/logo_footer.png'>
+					<h3>© 2018 Bee Social</h3>
+				</div>
+				<div class="col-lg-6 col-md-6 buttons">
+					<a href="">About</a>
+					<a href="">Projects</a>
+					<a href="">Resources</a>
+					<a href="">Sponsors</a>
+				</div>
+			</div>
+		</footer>
+		<div class="modal" id="need-auth-modal">
+			<div class="modal-content">
+				<span class="close"><img src="img/cross_modal.png"></span>
+				<h1>Стояночка!</h1>
+				<p>Мы рады, что вам стало интересно!</p>
+				<p>Для дальнейшего взаимодействия с платформной необходимо произвести регистрацию или войти!</p>
+				<a href="#" class="colored yellow">Зарегистрироваться</a>
+				<a href="#">Войти</a>
+			</div>
+		</div>
+		<div class="swatches">
+			<div class="rect"></div>
+			<div class="rect"></div>
+			<div class="rect"></div>
+			<div class="rect"></div>
+			<div class="rect"></div>
+		</div>
+		<div class="modal fade" tabindex="-1" role="dialog" id="request-new-modal">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">Request for a Beta</h4>
+					</div>
+					<div class="modal-body">
+						<form>
+						<fieldset>
+							<div class="form-group">
+								<label for="request-account-type">Accont type:</label>
+								<select class="form-control" id="request-account-type" name="request-account-type" required="">
+									<option></option>
+									<option value="1">NPO</option>
+									<option value="2">Sponsor</option>
+									<option value="3">Volunteer</option>
+									<option value="3">Other</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="request-email">Email address:</label>
+								<input type="email" class="form-control" id="request-email" name="request-email" placeholder="Your Email" required="">
+							</div>
+							<div class="form-group">
+								<label for="request-login">New login:</label>
+								<input type="text" class="form-control" id="request-login" name="request-login" placeholder="Your new login" required="">
+							</div>
+							<div class="form-group">
+								<label for="request-location">Location:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="request-location" name="request-location" placeholder="Your country and city" required="">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="detect-location-btn">Detect my location</button>
+									</span>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-success">Submit request</button>
+						</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.23/dist/bootstrap-native.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.13.1/dist/sweetalert2.all.min.js"></script>
+		<script src="js/site.js?201808141340"></script>
+	</body>
+</html>
