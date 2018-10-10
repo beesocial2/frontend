@@ -1,23 +1,25 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Bee Social - blockchain platform that connects volunteers, commercial companies and NPOs.</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<title>Bee Social - blockchain platform that connects volunteers, commercial companies and NPOs.</title>
+		<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter48904568 = new Ya.Metrika2({ id:48904568, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/tag.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks2"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/48904568" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
 	</head>
 	<body>
 		<nav class="container-fluid whiteTheme">
 			<div class="row">
-				<div class="col-lg-6 col-md-6 logo"><img src="img/logo.png" alt=""></div>
-				<div class="col-lg-6 col-mg-6 buttons">
+				<div class="col-lg-5 col-md-5 logo"><img src="img/logo.png" alt=""></div>
+				<div class="col-lg-7 col-mg-7 buttons">
 					<div class="row">
 						<a href="#" class="col-lg-2 col-md-2">О нас</a>
 						<a href="#" class="col-lg-2 col-md-2">Проекты</a>
 						<a href="#" class="col-lg-2 col-md-2">Призы</a>
 						<a href="#" class="col-lg-2 col-md-2">Спонсоры</a>
-						<a href="#" class="col-lg-2 col-md-2" id="request-new-btn"><img src="img/Icon.png"></a>
+						<a href="#" class="col-lg-2 col-md-2 request-new-btn">Бета <img src="img/Icon.png"></a>
+						<a href="index.html" class="col-lg-2 col-md-2 lang-btn">English <img src="img/flags/en.svg"></a>
 					</div>
 				</div>
 			</div>
@@ -30,7 +32,7 @@
 						<p><strong>Bee Social</strong> – социальная платформа, объединяющая коммерческие компании, социальные проекты и волонтёров.</p>
 						<p>Платформа Bee Social объединяет тех, кто хочет поделиться своими ресурсами, и тех, кому нужны эти ресурсы.</p>
 						<p>Платформа, где каждый может помочь социальному проекту своими ресурсами и волонтерством в обмен на соты - криптовалюту.</p>
-						<a href="#" class="colored purple">Узнать больше!</a>
+						<a href="#" class="colored purple request-new-btn">Зарегистрироваться в бета-версии!</a>
 					</div>
 					<div class="col-lg-6 col-md-6"><img src="img/about_logo.png" alt=""></div>
 				</div>
@@ -101,32 +103,32 @@
 						<div class="row">
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3><strong>@PetrReshetin</strong>   22.08.17, 8 свободных мест</h3>
+									<div class="image" id="photo-cft">150 <img src="img/price_icon.png"></div>
+									<h3><strong>@carbonfreetravel</strong> 22.08.17, 4 свободных мест</h3>
 									<div class="publisher">
 										<div class="avatar">
-											<img src="img/Petr_fish.jpg">   
+											<img src="img/avatars/carbonfreetravel.jpg">   
 										</div>
 										<div class="title">
 											<h2>Помощь волонтёров для CFT</h2>
 										</div>
 									</div>
 									<div class="text">
-										<p>Проекту Carbon Free Travel нужен разработчик на iOS</p>
+										<p>Проекту "Carbon Free Travel" нужен разработчик на iOS</p>
 									</div>
 									<a href="#" class="colored purple project-detail-btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3><strong>@PetrReshetin</strong>   22.08.17, 8 свободных мест</h3>
+									<div class="image" id="photo-vremy-zemli">150 <img src="img/price_icon.png"></div>
+									<h3><strong>@vremyazemli</strong> 15.08.17, 8 свободных мест</h3>
 									<div class="publisher">
 										<div class="avatar">
-											<img src="img/Petr_fish.jpg">   
+											<img src="img/avatars/vremyazemli.jpg">   
 										</div>
 										<div class="title">
-											<h2>Помощь волонтеров для Время Земли</h2>
+											<h2>Помощь волонтеров для "Время Земли"</h2>
 										</div>
 									</div>
 									<div class="text">
@@ -137,14 +139,14 @@
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3><strong>@PetrReshetin</strong>   22.08.17, 8 свободных мест</h3>
+									<div class="image" id="photo-eco-theatre">150 <img src="img/price_icon.png"></div>
+									<h3><strong>@ecoteatrminsk</strong> 10.09.18, 15 свободных мест</h3>
 									<div class="publisher">
 										<div class="avatar">
-											<img src="img/Petr_fish.jpg">   
+											<img src="img/avatars/ecoteatrminsk.jpg">   
 										</div>
 										<div class="title">
-											<h2>Помощь волонтеров в ЭкоТеатре</h2>
+											<h2>Помощь волонтеров в "ЭкоТеатре"</h2>
 										</div>
 									</div>
 									<div class="text">
@@ -156,7 +158,7 @@
 						</div>
 					</div>
 					<!-- Container with active card -->
-					<div class="container" id="project-detail">
+					<!-- <div class="container" id="project-detail">
 						<div class="row">
 						    <div class="col-lg-12">
 						        <div class="bigCard">
@@ -190,7 +192,7 @@
 						        </div>
 						    </div>
 						</div>
-					</div>
+					</div> -->
 					<!-- container with active card-->
 				</div>
 				<!--<div class="carousel-inner">
@@ -300,8 +302,8 @@
 						<div class="row">
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3>30 осталось</h3>
+									<div class="image" id="resource-cinema">150 <img src="img/price_icon.png"></div>
+									<h3>16 осталось</h3>
 									<div class="publisher">
 										<div class="title">
 											<h2>Билеты на Стражей галактики 2 в Silver Screen</h2>
@@ -315,8 +317,8 @@
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3>30 осталось</h3>
+									<div class="image" id="resource-music"  >150 <img src="img/price_icon.png"></div>
+									<h3>23 осталось</h3>
 									<div class="publisher">
 										<div class="title">
 											<h2>Билеты на Стражей галактики 2 в Silver Screen</h2>
@@ -330,8 +332,8 @@
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="card">
-									<div class="image">150 <img src="img/price_icon.png"></div>
-									<h3>30 осталось</h3>
+									<div class="image" id="resource-consulting">150 <img src="img/price_icon.png"></div>
+									<h3>42 осталось</h3>
 									<div class="publisher">
 										<div class="title">
 											<h2>Билеты на Стражей галактики 2 в Silver Screen</h2>
@@ -483,8 +485,8 @@
 		</div>-->
 		<div class="container-fluid joinUs">
 			<h1>Присоединяйся к нам!</h1>
-			<a href="#" class="colored yellow">Зарегистрироваться</a>
-			<a href="#">Войти</a>
+			<a href="#" class="colored yellow request-new-btn">Зарегистрироваться в бета-версии!</a>
+			<!-- <a href="#">Войти</a> -->
 		</div>
 		<footer class="container-fluid blueTheme">
 			<div class="row">
@@ -522,30 +524,39 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title">Request for a Beta access</h4>
+						<h4 class="modal-title">Регистрация в бета-версии</h4>
 					</div>
 					<div class="modal-body">
 						<form>
 						<fieldset>
 							<div class="form-group">
-								<label for="request-account-type">Accont type:</label>
+								<label for="request-account-type">Тип аккаунта:</label>
 								<select class="form-control" id="request-account-type" name="request-account-type" required="">
 									<option></option>
-									<option value="1">NPO</option>
-									<option value="2">Sponsor</option>
-									<option value="3">Volunteer</option>
-									<option value="3">Other</option>
+									<option value="1">НКО</option>
+									<option value="2">Спонсор</option>
+									<option value="3">Волонтёр</option>
+									<option value="4">Другой</option>
 								</select>
 							</div>
 							<div class="form-group">
-								<label for="request-email">Email address:</label>
+								<label for="request-email">Email адрес:</label>
 								<input type="email" class="form-control" id="request-email" name="request-email" placeholder="Your Email" required="">
 							</div>
 							<div class="form-group">
-								<label for="request-login">New login:</label>
+								<label for="request-login">Новый логин:</label>
 								<input type="text" class="form-control" id="request-login" name="request-login" placeholder="Your new login" required="">
 							</div>
-							<button type="submit" class="btn btn-success">Submit request</button>
+							<div class="form-group">
+								<label for="request-location">Местоположение:</label>
+								<div class="input-group">
+									<input type="text" class="form-control" id="request-location" name="request-location" placeholder="Your country and city" required="">
+									<span class="input-group-btn">
+										<button class="btn btn-primary" type="button" id="detect-location-btn">Определить моё местоположение</button>
+									</span>
+								</div>
+							</div>
+							<button type="submit" class="btn btn-success">Отправить запрос</button>
 						</fieldset>
 						</form>
 					</div>
@@ -554,7 +565,6 @@
 		</div>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap.native@2.0.23/dist/bootstrap-native.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.13.1/dist/sweetalert2.all.min.js"></script>
-		<script src="https://smtpjs.com/v2/smtp.js"></script>
 		<script src="js/site.js"></script>
 	</body>
 </html>

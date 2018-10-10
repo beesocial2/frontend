@@ -635,3 +635,8 @@ nav .request-new-btn {
   font-size: 14pt;
   font-weight: 600;
 }
+
+.lang-btn img {
+  height: 32px;
+  border: 2px solid #fdd54c;
+}
